@@ -1,0 +1,407 @@
+lpp functions.txt 
+  A listing of the built-in functions provided in the LPP runtime environment. 
+
+Copyright 2013 Aaron Hosford
+
+Licensed under the Apache License, Version 2.0 (the 'License');
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an 'AS IS' BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+
+
+is-file
+
+  Returns whether the path is a directory.
+
+
+is-dir
+
+  Returns whether the path is a directory.
+
+
+list-dir
+
+  Gets a list of the contents of a directory.
+
+
+get-env
+
+  Gets the value of an environment variable.
+
+
+number-to-ascii
+
+  Converts a number to a string containing its corresponding ascii character.
+
+
+list-to-array
+
+  Converts a list of values to an array.
+
+
+array-size
+
+  Returns the size of the array.
+
+
+array-cat
+
+  Returns the concatenation of any number of arrays.
+
+
+array-interval
+
+  Returns an array holding a subinterval of the original array's values.
+
+
+set-array-index
+
+  Sets the value stored in the array at the given index to the given value and returns it.
+
+
+get-array-index
+
+  Returns the value stored in the array at the given index.
+
+
+new-array
+
+  Creates a new array of the requested size.
+
+
+local
+
+  Makes a symbol's value local during the evaluation of the expression.
+
+
+get-prompt
+
+  Returns the prompt string for user-interaction mode.
+
+
+set-prompt
+
+  Sets the prompt string for user-interaction mode.
+
+
+throw
+
+  Throws (raises) an exception.
+
+
+catch
+
+  Catches an exception while evaluating the first argument if it occurs, binds it to the symbol provided and executes the remaining argument.
+
+
+doc
+
+  Returns: The documentation of a function.
+
+
+abort quit exit bye
+
+  Ends execution immediately without unwinding the execution stack. Returns: DOES NOT RETURN.
+
+
+system
+
+  No documentation available.
+
+
+preprocess
+
+  No documentation available.
+
+
+load-file
+
+  No documentation available.
+
+
+getc
+
+  No documentation available.
+
+
+close
+
+  No documentation available.
+
+
+is-open
+
+  No documentation available.
+
+
+fopen
+
+  No documentation available.
+
+
+or ||
+
+  No documentation available.
+
+
+and &&
+
+  No documentation available.
+
+
+not !
+
+  No documentation available.
+
+
+while
+
+  No documentation available.
+
+
+do1
+
+  No documentation available.
+
+
+do
+
+  No documentation available.
+
+
+if ?
+
+  If the value of argument 1 is non-nil, evaluates argument 2, otherwise evaluates argument 3. Returns: The result of whichever argument gets evaluated.
+
+
+defun
+
+  Creates a new function object. Returns: The new function object.
+
+
+set-symbol-doc
+
+  Sets the value of a symbol's doc string.
+
+
+identical =
+
+  Returns: If the objects are identical, t, else nil.
+
+
+equals
+
+  Returns: If the arguments are equal, t, else nil.
+
+
+copy
+
+  Returns: A copy of the argument if one can be made, otherwise the argument.
+
+
+type-of
+
+  Returns: The type of the argument.
+
+
+eval
+
+  Evaluates the argument. Returns: The result of the evaluation of the argument.
+
+
+to-string $
+
+  Returns: A string representation of the argument.
+
+
+set :=
+
+  Sets the value of argument 1 to argument 2. Returns: Argument 2.
+
+
+value
+
+  Returns: The effective value of the argument.
+
+
+symbol-name
+
+  Returns: The name of the argument.
+
+
+strlen
+
+  Returns: The length of the string.
+
+
+find-substring
+
+  Returns: The location of the earliest occurrence of the second string in the first.
+
+
+string-has-prefix
+
+  Returns: Non-nil iff the second string is a prefix of the first.
+
+
+string-shared-prefix
+
+  Returns: The length of the longest shared prefix of two strings.
+
+
+substr
+
+  Returns: The substring of argument 1 defined by range [argument 2, argument 3).
+
+
+cat
+
+  Returns: The concatenation of the arguments.
+
+
+prints
+
+  Prints the concatenation of any number of strings to stdout. Returns: The concatenation of the arguments.
+
+
+quote
+
+  Returns: A new quote object.
+
+
+quote-value
+
+  Returns: The quote's value.
+
+
+absolute-value abs
+
+  Returns: The absolute value of a rational number.
+
+
+square-root
+
+  Returns: The square root of a non-negative rational number.
+
+
+mantissa
+
+  Returns: The mantissa of a rational number.
+
+
+less-than <
+
+  Returns: If each argument is less than the previous, t, else nil.
+
+
+greater-than >
+
+  Returns: If each argument is greater than the previous, t, else nil.
+
+
+divided-by /
+
+  Returns: The ratio of the arguments.
+
+
+negative -
+
+  Returns: The negation of the argument.
+
+
+times *
+
+  Returns: The product of the arguments.
+
+
+plus +
+
+  Returns: The sum of the arguments.
+
+
+list-length
+
+  Returns: The length of the argument.
+
+
+list
+
+  Returns: A new list of the arguments.
+
+
+set-cdr
+
+  Sets the cdr of argument 1 to argument 2. Returns: Argument 2.
+
+
+set-car
+
+  Sets the car of argument 1 to argument 2. Returns: Argument 2.
+
+
+cdr rest tail
+
+  Returns: The cdr of the argument.
+
+
+car first head
+
+  Returns: The car of the argument.
+
+
+cons
+
+  Returns: A new cons object.
+
+
+version
+
+  Returns this LPP executable's version number.
+
+
+show-symbols
+
+  Prints the name and value of each symbol in the symbol table.
+
+
+help
+
+  Prints a (hopefully) helpful blurb for new users.
+
+
+set-member
+
+  Sets the value of the selected member of the given object. Exception if not allowed.
+
+
+get-member
+
+  Returns the value of the selected member of the given object. Exception if not allowed.
+
+
+call-method ::
+
+  Calls the specified method of the given object on the remaining arguments.
+
+
+new
+
+  Creates a new object of the given class.
+
+
+defclass
+
+  Creates a new class.
+
+
+
+

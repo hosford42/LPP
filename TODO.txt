@@ -1,0 +1,51 @@
+TODO.txt
+  A far from complete list of changes I'd like to eventually make to the LPP
+  interpreter.
+
+Copyright 2013 Aaron Hosford
+
+Licensed under the Apache License, Version 2.0 (the 'License');
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an 'AS IS' BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+
+- Make exceptions propagate all the way up, so they don't get ignored anymore.
+
+- Add documentation to explain the current state of the code, esp. that the OOP stuff isn't finished.
+- Finish up on OOP accommodation, even if the syntax sucks.
+- Convert to object-oriented syntax and visible structure.
+
+- Make a 'pretty-print' function and use it as the default result printer.
+
+- Add documentation explaning how to build & install the system.
+- Add regression tests to the build process.
+- Clean out vestigial bits of code.
+- Normalize code so that naming conventions, etc. are more consistent. (Example: functions for strings starting w/ and ending w/ substrings.)
+- Move the autoload.lsp etc. to a lib subfolder, and the documentation to a doc subfolder.
+- Make LPP use environment variables to find autoload.lsp, etc.
+- Add the autoloaded (non-built-in) functions to the function documentation.
+- Add an HTML version of the built-in function documentation.
+- Package up everything for easy distribution & installation.
+- Add build/install/uninstall scripts that don't depend on lpp.exe.
+
+- Make .lib and .dll files in addition to the .exe file already generated, so LPP can be used as a scripting back-end to other programs.
+- Get rid of static global data, and use parameter structs instead.
+- Add support for threading; remember that Python's approach of using a global interpreter lock is a *bad* idea.
+- Protect against stack overflow, preferrably by creating an explicit stack.
+- Make control-C stop the current evaluation loop instead of the interpreter.
+
+- Make mlpp's build use the source from lpp and just add to it based on a flag, instead of keeping separate copies of everything.
+
+- Build a more complete 'project' structure.
+- Add support for packages.
+
+
